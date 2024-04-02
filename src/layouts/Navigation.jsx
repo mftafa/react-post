@@ -1,5 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import AppLogo from "../components/shared/AppLogo.jsx";
+import NavButton from "../components/shared/NavButton.jsx";
 export default function Navigation(){
     return(
         <>
@@ -9,14 +10,14 @@ export default function Navigation(){
                     <div className="flex items-center">
                         <AppLogo />
                         <div className="ml-10 flex items-baseline space-x-4">
-                            <NavLink to={"/"} className={({ isActive }) => (isActive ? 'rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white bg-gray-900' : 'rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white')}>Home</NavLink>
-                            <NavLink to={"/posts"} className={({ isActive }) => (isActive ? 'rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white bg-gray-900' : 'rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white')}>Posts</NavLink>
-                            <NavLink to={"/about"} className={({ isActive }) => (isActive ? 'rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white bg-gray-900' : 'rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white')}>About Us</NavLink>
-                            <NavLink to={"/contact"} className={({ isActive }) => (isActive ? 'rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white bg-gray-900' : 'rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white')}>Contacts</NavLink>
+                            <NavButton destination={"/"} name={"Home"} />
+                            <NavButton destination={"/posts"} name={"Posts"} />
+                            <NavButton destination={"/about"} name={"About Us"} />
+                            <NavButton destination={"/contact"} name={"Contacts"} />
                         </div>
                     </div>
                     <div className="flex items-center">
-                        <NavLink to={"/dashboard"} className="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Dashboard</NavLink>
+                        <NavButton destination={"/dashboard"} name={"Dashboard"} />
                     </div>
                 </div>
             </div>
