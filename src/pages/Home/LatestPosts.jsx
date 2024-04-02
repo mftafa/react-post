@@ -1,5 +1,5 @@
 import {useEffect, useState} from "react";
-import SinglePost from "../Posts/SinglePost.jsx";
+import SinglePost from "../../components/Post/SinglePost.jsx";
 
 export default function LatestPosts(){
 
