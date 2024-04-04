@@ -15,9 +15,9 @@ export default function Contact() {
         event.preventDefault();
 
         let data = {
-            title: nameInputProps?.value,
-            image: emailInputProps?.value,
-            category: messageInputProps?.value
+            name: nameInputProps?.value,
+            email: emailInputProps?.value,
+            message: messageInputProps?.value
         };
 
         try {
